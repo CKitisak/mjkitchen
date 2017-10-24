@@ -16,34 +16,14 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <?php wp_head(); ?>
-    
+
     <?php if(mytheme_option('custom_css')!="") : ?>
 	    <style>
 			<?php echo mytheme_option('custom_css'); ?>
 		</style>
 	<?php endif; ?>
-	
-	<script>
-		// Use full jQuery function name to reference jQuery.
-		jQuery(document).ready(function() {
-    		jQuery('#s-toggle').click(function() {
-				jQuery('.s-form').animate({
-					width: "toggle",
-					opacity: "toggle"
-				}, 100);
-			});
-			
-			jQuery(window).scroll(function() {
-              if (jQuery(this).scrollTop()) {
-                    jQuery('.toTop:hidden').stop(true, true).fadeIn();
-              } else {
-                    jQuery('.toTop').stop(true, true).fadeOut();
-               }
-          });
-		});
-	</script>
   </head>
   <body <?php body_class($class); ?>>
   <header id="header">
@@ -53,12 +33,12 @@
 		  		<?php if(mytheme_option('site_logo')) : ?>
 		  			<div class="col-md-5">
 		  				<div class="site-logo-box">
-					  		<a href="<?php echo site_url(); ?>"><img class="site-logo" src="<?php echo mytheme_option('site_logo'); ?>" alt="<?php bloginfo('description'); ?>" width="100%" /></a>
-		  				</div>	  				
+					  		<a href="<?php echo site_url(); ?>"><img class="site-logo" src="<?php echo mytheme_option('site_logo'); ?>" alt="<?php bloginfo('description'); ?>" /></a>
+		  				</div>
 		  			</div>
 		  			<div class="col-md-5 col-md-offset-2">
 		  				<?php echo qtrans_generateLanguageSelectCode('image'); ?>
-		  				
+
 		  				<div class="clearfix"></div>
 		  				<div class="social-box">
 		  					<?php if(mytheme_option('mj_facebook')=="") : else : ?>
@@ -70,19 +50,19 @@
 		  					<?php if(mytheme_option('mj_googleplus')=="") : else : ?>
 			  					<a href="<?php echo mytheme_option('mj_googleplus'); ?>" target="_blank"><span class="social gp-icon"></span></a>
 		  					<?php endif; ?>
-		  					
+
 		  					<form action="<?php bloginfo('siteurl'); ?>" id="searchform" class="s-form" method="get">
 						         <input type="search" id="s" name="s" />
 							</form>
 		  					<a id="s-toggle"><span class="social search-icon"></span></a>
-		  					
+
 		  				</div>
 		  			</div>
 	  			<?php else : ?>
 	  				<div class="col-md-4">
 		  				<div class="site-logo-box">
 					  		<a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
-		  				</div>	  				
+		  				</div>
 		  			</div>
 		  			<div class="col-md-4 col-md-offset-4">
 		  				<div class="social-box">
@@ -115,10 +95,10 @@
   		</div><!-- /.row -->
 	</div><!-- /.container-fluid -->
   </header>
-  
+
   <a href="#"  class="toTop" class="btn btn-default btn-lg" role="button"><span class="glyphicon glyphicon-chevron-up"></span></a>
-  
+
   <div class="background"><img src="<?php echo mytheme_option('background_image'); ?>" width="100%" /></div>
-  
+
   <div id="main">
 	  <div class="container">
