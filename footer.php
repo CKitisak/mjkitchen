@@ -21,7 +21,7 @@
 	</footer>
 
   <!-- Modal -->
-  <div class="modal fade" id="mjIntroModal" tabindex="-1" role="dialog" aria-labelledby="mjkitchenIntro">
+  <!-- <div class="modal fade" id="mjIntroModal" tabindex="-1" role="dialog" aria-labelledby="mjkitchenIntro">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-body no-padding">
@@ -33,7 +33,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
     <?php wp_footer(); ?>
 
@@ -46,7 +46,7 @@
 					opacity: "toggle"
 				}, 100);
 			});
-      jQuery('#mjIntroModal').modal('show');
+      // jQuery('#mjIntroModal').modal('show');
 
 			jQuery(window).scroll(function() {
               if (jQuery(this).scrollTop()) {
